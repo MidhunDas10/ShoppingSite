@@ -1,17 +1,14 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "3ab7d50c-3a56-48c9-bcaa-aff042a06666"
+    "analytics": "50bc9817-8a53-410a-ad05-b2038ac443ec"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "add-to-cart": {
+    "ShoppingSite": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -23,18 +20,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/add-to-cart",
+            "outputPath": "dist/ShoppingSite",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -75,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "add-to-cart:build:production"
+              "browserTarget": "ShoppingSite:build:production"
             },
             "development": {
-              "browserTarget": "add-to-cart:build:development"
+              "browserTarget": "ShoppingSite:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "add-to-cart:build"
+            "browserTarget": "ShoppingSite:build"
           }
         },
         "test": {
@@ -96,13 +92,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -110,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "add-to-cart"
+  "defaultProject": "ShoppingSite"
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
+import data from 'src/app/files/db.json';
 
 @Component({
   selector: 'app-cart',
@@ -7,7 +8,7 @@ import { CartService } from 'src/app/service/cart.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-
+  public datalist :{email:string , password:string }[]=data ;
   public products : any = [];
   public grandTotal !: number;
   constructor(private cartService : CartService) { }
@@ -25,5 +26,11 @@ export class CartComponent implements OnInit {
   emptycart(){
     this.cartService.removeAllCart();
   }
+  sendmail(){
+    
+    
+    }
+     
+  }
 
-}
+

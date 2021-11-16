@@ -1,0 +1,26 @@
+.main{
+  margin: 0;
+  width: 30%;
+  padding: 100px;
+  padding-top: 20vh;
+   
+  
+}
+
+html { 
+    height: 100vh;
+    background: url('src\app\component\login\image\shopping-bag-cart.jpg') 
+    no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } 
+
+  h1{
+      color: rgb(14, 106, 187);
+  }
+  
+  button {
+      width: 190px;
+  }

@@ -9,7 +9,9 @@ import { ProductsComponent } from './component/products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './shared/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './component/login/login.component';
+
+
 
 @NgModule({
   declarations: [
