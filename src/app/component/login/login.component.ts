@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   {
     
     
-    if(this.loginForm.value.email==data.email)
+    if(this.loginForm.value.email==data.email && this.loginForm.value.password == data.password)
     {
       console.log("success")
       this.router.navigate(['products'])

@@ -24,3 +24,9 @@ html {
   button {
       width: 190px;
   }
+
+
+  .app-header{
+    
+    visibility: hidden;
+  }

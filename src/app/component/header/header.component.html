@@ -1,26 +1,35 @@
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script type="text/javascript">
-(function() {
-emailjs.init("user_9pgt5VTm3LD01C8oCDUFI");
-})();
-</script>
 <header>
     <div class="navbar navbar-dark bg-primary shadow-sm">
         <div class="navbar-brand align-item-center d-flex">
-            <i style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp;
+            <i class="icon" style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp;
                 
             </i>
-            <strong style="font-size: 30px;">ShoppingSite</strong>
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+            <div class="title">
+                <strong style="font-size: 30px;">ShoppingSite</strong>
             </div>
-            <span class="fas fa-search search-icon"></span>
+            
+            <div class="form-group">
+                <input class="search" type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+                
+                
+                
+            </div>
+                
+            <div>
+                <span class="fas fa-fw  fa-search search-icon"></span>
+            </div>
 
 
         </div>
-        <button routerLink="cart" class="btn btn-primary">
-            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
-            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
-        </button>
+                   
+        <div>
+            
+            
+            <button routerLink="cart" class="btn btn-primary">
+                <i routerLink="cart" style="font-size: 30px;" class="fas fa-cart-plus"></i>
+                <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+            </button>
+        </div>
+        
     </div>
 </header>
