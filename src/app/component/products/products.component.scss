@@ -1,5 +1,5 @@
 .card-top {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -15,7 +15,7 @@
 }
 
 .item {
-    margin: 0px 15px;
+    margin: 0px 10px;
     text-align: center;
 }
 
@@ -24,11 +24,15 @@
 }
 
 .card {
+    
+    position: relative;
     padding: 20px;
-    margin: 50px;
+    margin-top: 130px;
+    
 }
 
 .card img {
+    align-items: center;
     width: 200px;
     height: 200px;
     margin-bottom: 15px;
@@ -38,4 +42,8 @@
 .card img:hover {
     transition: 0.3s ease-in-out;
     transform: scale(1.1);
+}
+
+.html{
+    position: absolute;
 }

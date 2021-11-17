@@ -1,9 +1,23 @@
 <header>
     <div class="navbar navbar-dark bg-primary shadow-sm">
         <div class="navbar-brand align-item-center d-flex">
-            <i class="icon" style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp;
+          
+          <mat-icon mat-icon-button [matMenuTriggerFor]="menu" >menu</mat-icon>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>perm_identity</mat-icon>
+              <span>Profile</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>add_shopping_cart</mat-icon>
+              <span>Cart</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>help</mat-icon>
+              <span>Help</span>
+            </button>
+          </mat-menu>
                 
-            </i>
             <div class="title">
                 <strong style="font-size: 30px;">ShoppingSite</strong>
             </div>
@@ -15,7 +29,7 @@
                 
             </div>
                 
-            <div>
+            <div class="search">
                 <span class="fas fa-fw  fa-search search-icon"></span>
             </div>
 
@@ -25,8 +39,8 @@
         <div>
             
             
-            <button routerLink="cart" class="btn btn-primary">
-                <i routerLink="cart" style="font-size: 30px;" class="fas fa-cart-plus"></i>
+            <button [routerLink]="'/cart'" class="btn btn-primary">
+                <i  style="font-size: 30px;" class="fas fa-cart-plus"></i>
                 <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
             </button>
         </div>

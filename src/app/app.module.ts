@@ -10,6 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './shared/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './component/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import { ScrollToTopComponent } from './component/scroll-to-top/scroll-to-top.component';
 
 
 
@@ -20,14 +24,20 @@ import { LoginComponent } from './component/login/login.component';
     CartComponent,
     ProductsComponent,
     FilterPipe,
-    LoginComponent
+    LoginComponent,
+    ScrollToTopComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
