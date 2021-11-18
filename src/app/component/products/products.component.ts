@@ -13,10 +13,13 @@ export class ProductsComponent implements OnInit {
   
   
   public productList : any ;
-  public datalist :{id:number,title:string,price:number,description:string,category:'string',image:'string'}[]=data ;
+  public datalist :{id:number,title:string,price:number,description:string,category:'string',image:'string',toggle:'string'}[]=data ;
   public filterCategory : any
   searchKey:string ="";
+  btnVal = "ADD TO CART";
   constructor( private cartService : CartService) { }
+  toggle = true;
+  toggleButton = 'Disable';
 
   ngOnInit(): void {
     
@@ -38,6 +41,7 @@ export class ProductsComponent implements OnInit {
   }
   addtocart(item: any){
     this.cartService.addtoCart(item);
+    
   }
   filter(category:string){
     this.filterCategory = this.productList

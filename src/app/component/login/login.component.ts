@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import data from 'src/app/files/db.json';
-import {Router} from '@angular/router'
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -21,13 +22,14 @@ export class LoginComponent implements OnInit {
     if(this.loginForm.value.email==data.email && this.loginForm.value.password == data.password)
     {
       console.log("success")
+    
       this.router.navigate(['products'])
       
     }
     else
     {
       console.log("fail")
-      alert("Login Credentials invalid");
+      
       this.router.navigate(['login'])
     }
 

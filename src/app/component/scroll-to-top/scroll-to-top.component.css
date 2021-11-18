@@ -4,6 +4,9 @@
     right: 15px;
     opacity: 0;
     transition: all .2s ease-in-out;
+    z-index: 99;
+    background: blue;
+    border-radius: 50%;
    }
    .show-scrollTop {
     opacity: 1;

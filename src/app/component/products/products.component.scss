@@ -1,3 +1,7 @@
+// /navbar-sub
+.navbar-sub{
+    justify-content: space-around;
+}
 .card-top {
     position: absolute;
     display: flex;
@@ -6,12 +10,16 @@
     word-wrap: break-word;
     background: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    //border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: .25rem;
+}
+.card-item{
+    border:none;
+    margin:20px 0;
 }
 
 .item img {
-    width: 64px;
+    // width: 64px;
 }
 
 .item {
@@ -25,25 +33,30 @@
 
 .card {
     
-    position: relative;
-    padding: 20px;
-    margin-top: 130px;
+    // position: relative;
+    padding:10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
     
 }
 
 .card img {
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 15px;
+    width: 150px;
+    height: 150px;
+    max-width:80%;
+    //margin-bottom: 15px;
     transition: 0.3s ease-in-out;
 }
 
 .card img:hover {
-    transition: 0.3s ease-in-out;
-    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .html{
     position: absolute;
+}
+
+.item:hover {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }

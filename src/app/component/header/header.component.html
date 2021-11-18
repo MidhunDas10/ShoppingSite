@@ -1,8 +1,8 @@
-<header>
-    <div class="navbar navbar-dark bg-primary shadow-sm">
-        <div class="navbar-brand align-item-center d-flex">
-          
-          <mat-icon mat-icon-button [matMenuTriggerFor]="menu" >menu</mat-icon>
+<!-- <header> -->
+    <div class="navbar navbar-top navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex ">
+          <div>
+             <mat-icon mat-icon-button [matMenuTriggerFor]="menu" >menu</mat-icon>
           <mat-menu #menu="matMenu">
             <button mat-menu-item>
               <mat-icon>perm_identity</mat-icon>
@@ -17,26 +17,24 @@
               <span>Help</span>
             </button>
           </mat-menu>
+          </div>
+         
                 
-            <div class="title">
+            <div class=" nav-item title">
                 <strong style="font-size: 30px;">ShoppingSite</strong>
             </div>
             
-            <div class="form-group">
+            <div class=" nav-item form-group">
                 <input class="search" type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
                 
                 
                 
             </div>
                 
-            <div class="search">
+            <div class="nav-item search">
                 <span class="fas fa-fw  fa-search search-icon"></span>
             </div>
-
-
-        </div>
-                   
-        <div>
+ <div>
             
             
             <button [routerLink]="'/cart'" class="btn btn-primary">
@@ -44,6 +42,10 @@
                 <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
             </button>
         </div>
+
+        </div>
+                   
+       
         
     </div>
-</header>
+<!-- </header> -->
