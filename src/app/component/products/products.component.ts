@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
   searchKey:string ="";
   btnVal = "ADD TO CART";
   constructor( private cartService : CartService) { }
-  toggle = true;
+  toggle = false;
   toggleButton = 'Disable';
 
   ngOnInit(): void {
@@ -41,6 +41,7 @@ export class ProductsComponent implements OnInit {
   }
   addtocart(item: any){
     this.cartService.addtoCart(item);
+    
     
   }
   filter(category:string){

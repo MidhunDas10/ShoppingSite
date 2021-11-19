@@ -15,6 +15,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { ScrollToTopComponent } from './component/scroll-to-top/scroll-to-top.component';
 
+import { NotFoundComponent } from './component/not-found/not-found.component';
+
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { ScrollToTopComponent } from './component/scroll-to-top/scroll-to-top.co
     FilterPipe,
     LoginComponent,
     ScrollToTopComponent,
+   
+    NotFoundComponent,
     
     
   ],

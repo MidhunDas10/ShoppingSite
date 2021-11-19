@@ -10,11 +10,16 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   public datalist :{email:string , password:string }[]=data ;
+  alert:boolean=false
+  
   loginForm=new FormGroup({
     email:new FormControl(''),
     password:new FormControl('')
   })
   constructor(private router:Router) { }
+  closeAlert(){
+    this.alert=false
+  }
   loginUser()
   {
     
@@ -22,14 +27,14 @@ export class LoginComponent implements OnInit {
     if(this.loginForm.value.email==data.email && this.loginForm.value.password == data.password)
     {
       console.log("success")
-    
+      
       this.router.navigate(['products'])
       
     }
     else
     {
       console.log("fail")
-      
+      this.alert=true
       this.router.navigate(['login'])
     }
 

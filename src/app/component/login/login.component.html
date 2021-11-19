@@ -1,13 +1,23 @@
 <html>
-    <div class="main">
+    <div class="container">
+        <div class="main ">
     
-        <h1 > Login </h1>
-        <div>
-            <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
-                <input type="text" placeholder="enter email" formControlName="email" > <br><br>
-                <input type="text" placeholder="enter password" formControlName="password" > <br><br>
-                <button class="btn btn-primary" >Login</button>
-            </form>
+            <h1 > Login </h1>
+            <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Invalid Credentials </strong> Please Try again.
+                <button (click)="closeAlert()" type="button btn-danger" class="close btn " data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              
+            <div>
+                <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                    <input type="text" class="form-control" placeholder="enter email" formControlName="email" > <br><br>
+                    <input type="password" class="form-control" placeholder="enter password" formControlName="password" > <br><br>
+                    <button class="btn btn-primary" >Login</button>
+                </form>
+            </div>
         </div>
     </div>
+    
 </html>
